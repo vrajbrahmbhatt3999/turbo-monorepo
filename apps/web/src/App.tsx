@@ -1,16 +1,11 @@
 import React from 'react';
-import {Button} from '@my-monorepo/ui';
-import Inventory from '@my-monorepo/inventory/inventory';
+import { Inventory } from '@my-monorepo/inventory';
 
 function App() {
   return (
-    <> 
-    <div className="text-center text-secondary bg-gray-100 p-4 rounded font-serif">
-      Tailwind is working in Monorepo 🚀
+    <div className="min-h-screen flex items-center justify-center bg-black">
+      <Inventory />
     </div>
-      <Button/>
-    <Inventory />
-    </>
   );
 }
 
