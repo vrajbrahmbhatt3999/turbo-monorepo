@@ -1,0 +1,8 @@
+{
+  "name": "@my-monorepo/server-express-api",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@my-monorepo/core": "*"
+  }
+}
