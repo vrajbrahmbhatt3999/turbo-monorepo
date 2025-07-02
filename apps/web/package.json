@@ -12,7 +12,8 @@
     "react-dom": "^18.2.0",
     "@my-monorepo/ui": "*",
     "@my-monorepo/inventory": "*",
-    "@my-monorepo/tailwind-config": "*"
+    "@my-monorepo/tailwind-config": "*",
+    "@my-monorepo/core": "*"
   },
   "devDependencies": {
     "@types/react-dom": "^19.1.6",
