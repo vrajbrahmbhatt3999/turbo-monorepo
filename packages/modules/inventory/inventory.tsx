@@ -2,10 +2,12 @@ import React from 'react';
 import { useInventory } from './useInventory';
 import { Button } from '@my-monorepo/ui';
 import { Toast } from '@my-monorepo/ui';
+import { Can } from '@casl/react';
+import { useAbility } from '@my-monorepo/core';
  
 export const Inventory = () => {
   const { form, items, handleChange, handleSubmit } = useInventory();
- 
+   const ability = useAbility();
   return (
     <div className="w-full max-w-2xl p-6 bg-white rounded-xl shadow-md space-y-6 animate-fade-in-up">
       <h1 className="text-2xl font-bold text-primary text-center">
@@ -47,9 +49,11 @@ export const Inventory = () => {
           />
         </div>
  
+ <Can I="create" a="sales_invoice" ability={ability}>
         <div className="text-center">
           <Button title="Add Item" type="submit" />
         </div>
+      </Can>
       </form>
  
       <div className="border-t pt-4 border-gray-200">

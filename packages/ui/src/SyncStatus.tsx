@@ -5,7 +5,13 @@ export const SyncStatus = () => {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 
   useEffect(() => {
-    eventBus.on('network-status', setIsOnline);
+    const handler = (status: unknown) => {
+      setIsOnline(Boolean(status));
+    };
+    eventBus.on('network-status', handler);
+    return () => {
+      eventBus.off('network-status', handler);
+    };
   }, []);
 
   return (

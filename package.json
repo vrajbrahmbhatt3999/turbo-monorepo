@@ -43,5 +43,9 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "@casl/ability": "^6.7.3",
+    "@casl/react": "^5.0.0"
   }
 }
