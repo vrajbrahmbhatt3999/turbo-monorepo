@@ -4,16 +4,16 @@ import { Button } from '@my-monorepo/ui';
 import { Toast } from '@my-monorepo/ui';
 import { Can } from '@casl/react';
 import { useAbility } from '@my-monorepo/core';
- 
+
 export const Inventory = () => {
   const { form, items, handleChange, handleSubmit } = useInventory();
-   const ability = useAbility();
+  const ability = useAbility();
   return (
     <div className="w-full max-w-2xl p-6 bg-white rounded-xl shadow-md space-y-6 animate-fade-in-up">
       <h1 className="text-2xl font-bold text-primary text-center">
         Inventory Module
       </h1>
- 
+
       <form
         onSubmit={handleSubmit}
         className="space-y-4 border-t pt-4 border-gray-200"
@@ -32,7 +32,7 @@ export const Inventory = () => {
             required
           />
         </div>
- 
+
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Quantity
@@ -48,14 +48,14 @@ export const Inventory = () => {
             required
           />
         </div>
- 
- <Can I="create" a="sales_invoice" ability={ability}>
-        <div className="text-center">
-          <Button title="Add Item" type="submit" />
-        </div>
-      </Can>
+
+        <Can I="create" a="sales_invoice" ability={ability}>
+          <div className="text-center">
+            <Button title="Add Item" type="submit" />
+          </div>
+        </Can>
       </form>
- 
+
       <div className="border-t pt-4 border-gray-200">
         <h2 className="text-lg font-semibold text-gray-800 mb-4">
           Inventory List
@@ -73,7 +73,7 @@ export const Inventory = () => {
                 </tr>
               </thead>
               <tbody>
-                {items.map((item, index) => (
+                {items.map((item: { id: string | number; name: string; quantity: number }, index: number) => (
                   <tr key={item.id} className="hover:bg-gray-50">
                     <td className="py-2 px-4 border-b">{index + 1}</td>
                     <td className="py-2 px-4 border-b">{item.name}</td>
@@ -85,9 +85,9 @@ export const Inventory = () => {
           </div>
         )}
       </div>
-      <Toast/>
+      <Toast />
     </div>
   );
 };
- 
+
 export default Inventory;

@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@my-monorepo/zustand-store": ["packages/zustand-store/src"]
+    }
+  }
+}
