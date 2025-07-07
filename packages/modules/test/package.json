@@ -1,0 +1,9 @@
+{
+  "name": "@my-monorepo/test",
+  "version": "1.0.0",
+  "main": "./index.ts",
+  "dependencies": {
+    "@my-monorepo/core": "*",
+    "@my-monorepo/ui": "*"
+  }
+}

@@ -12,6 +12,7 @@
     "react-dom": "^18.2.0",
     "@my-monorepo/ui": "*",
     "@my-monorepo/inventory": "*",
+    "@my-monorepo/test": "*",
     "@my-monorepo/tailwind-config": "*",
     "@my-monorepo/core": "*"
   },

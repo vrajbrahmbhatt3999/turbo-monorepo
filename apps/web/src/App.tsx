@@ -1,11 +1,15 @@
-import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Inventory } from '@my-monorepo/inventory';
+import { Test } from '@my-monorepo/test';
+import { Login } from '@my-monorepo/core';
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black">
-      <Inventory />
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/inventory" element={<Inventory />} />
+      <Route path="/test" element={<Test />} />
+    </Routes>
   );
 }
 

@@ -12,6 +12,9 @@ const config: Config = {
         sans: ['Inter', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
       },
+      backgroundImage: {
+        loginBg: "url('/background-login.png')",
+      },
     },
   },
   plugins: [],
