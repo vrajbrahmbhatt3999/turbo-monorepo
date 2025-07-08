@@ -18,10 +18,7 @@ const config: Config = {
       },
        fontSize: {
         '21': '21.46px',
-      },
-       backgroundColor: {
-        'blue': '#21446e',
-      },
+      }
     },
   },
 };

@@ -4,6 +4,7 @@ export type InventoryItem = {
   id: number;
   name: string;
   quantity: number;
+  price?: number; // Optional price field
 };
 
 type State = {

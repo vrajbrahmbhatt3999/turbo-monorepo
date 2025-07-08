@@ -36,9 +36,16 @@ export const useInventory = () => {
       quantity: form.quantity,
     };
 
+    // Provide a price value for the invoice (set to 0 or get from form if available)
+    const invoice = {
+      name: form.name,
+      price: 0, // Replace 0 with actual price if available in your form/state
+      quantity: form.quantity,
+    };
+
     try {
       const resolvedAdapter = await adapter;
-      await resolvedAdapter.createInvoice([newItem]);
+      await resolvedAdapter.createInvoice(invoice);
     } catch (error) {
       console.error('Error creating invoice:', error);
     }
